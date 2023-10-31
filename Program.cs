@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
@@ -154,7 +154,10 @@ namespace Carpet
             Console.WriteLine($"Receipt------" +
                               $"{user.colour} {user.carpet}-----" +
                               $"Price : {user.price}");
-            Console.ReadKey();
+            StreamWriter sw = new StreamWriter("Orders.txt",flase);
+            sw.write($"[{user.fname}, {user.lname}, {user.colour}, {user.carpet}, {carpet.length}, {user.price}]");
+            sw.Close();
+
 
         }
     }
