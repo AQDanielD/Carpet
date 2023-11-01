@@ -131,7 +131,7 @@ namespace Carpet
         {
             
 
-            Console.Write("Name: "); string name = Console.ReadLine();
+                            Console.Write("Name: "); string name = Console.ReadLine().trim();
 
             if(name.Contains(" "))
             {
